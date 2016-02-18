@@ -1,0 +1,17 @@
+//$socials-layout: horisontal;
+//
+//$socials-spacing: 70px;
+//
+//@import "socials/*png";
+//
+//$socials: vk, fb, tw;
+//
+//@each $item in $socials{
+//    .sogial__link_#{$item}{
+//        @include social-sprite($item);
+//        
+//    }
+//}
+
+
+$map :sprite-map('socials/*png', $spacing: 70px);

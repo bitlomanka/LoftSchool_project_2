@@ -1,0 +1,37 @@
+header.header
+    .header-bg
+        .wrapper
+            .container-block
+                .container-social
+                    ul.social
+                        - var social = ['fb', 'vk', 'tw']
+                        each item, index in social
+                                li.social__item
+                                    a(href="#" class="sogial__link_#{item}").socials__link= item
+                .contacts-header
+                    .contacts-header__block
+                        | ул. Маяковская 6, офис 17
+                        | +7 (921) 123-12-13
+    .wrapper
+        .container-block
+            a(href="#").logo
+                img(src="images/logo.png", alt="logo").logo__img
+            form.search
+                input(type="search" name="search" placeholder="Что будем искать").search__field
+                input(type="submit" value="Найти").search__submit
+            ul.block-user
+                - var userLink = ['Карта проезда', 'История заказов', 'Корзина']
+                    each item, idx in userLink
+                            li.block-user__item
+                                a(href="#").block-user__link= item
+    .header-bg
+        .wrapper
+            nav
+                ul.navigation
+                    - var nav = ['Планшеты', 'Мобильные телефоны', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
+                        each item in nav
+                            li.navigation__item
+                                a(href="#").navigation__link= item
+    .wrapper
+        .container-block
+            include _bredcrums

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- build:css css/bundle.min.css -->
+    <link href="bower/normalize-css/normalize.css" rel="stylesheet">
+    <link href="fonts/stylesheet.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- endbuild -->
+    <!-- build:js js/modernizr.js -->
+    <script src="js/libs/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner_wrapper">
+            <header class="header">
+                <div class="container_header clearfix">
+                    <a href="index.html" class="logo_block">
+                        <img src="images/logo.png" alt="LoftSchool" class="logo">
+                        <span class="logo_text">
+                            Loftschool. От мыслителя к создателю
+                        </span>
+                    </a>
+                    <div class="header_right clearfix">
+                         <ul class="social">
+                            <li class="social_item">
+                                <a href="https://www.facebook.com/profile.php?id=100009317504364" target="_blank" class="social_item_link facebook">
+                                    facebook
+                                </a>
+                            </li>
+                            <li class="social_item">
+                                <a href="https://vk.com/b1tlomanka" target="_blank" class="social_item_link vkontakte">
+                                    vkontakte
+                                </a>
+                            </li>
+                            <li class="social_item">
+                                <a href="#" class="social_item_link twitter">
+                                    twiter
+                                </a>
+                            </li>
+                             <li class="social_item">
+                                <a href="https://github.com/bitlomanka" target="_blank" class="social_item_link github">
+                                    github
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mobile_menu"> 
+                            <nav class="navigation_mob">
+                                <ul class="list">
+                                    <li class="menu_item">
+                                        <a href="index.html" class="list_item menu_item_link active_nav">Обо мне</a>
+                                    </li>
+                                    <li class="menu_item">
+                                        <a href="project.html" class="list_item menu_item_link ">Мои Работы</a>
+                                    </li>
+                                    <li class="menu_item">
+                                        <a href="form.html" class="list_item menu_item_link">Обратная связь</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <main class="content">
+                    <section class="content_section clearfix">
+                        <div class="title_content">
+                            У вас интересный проект? Напишите мне
+                        </div>
+                        <div class="container_info clearfix">
+                            <form action="https://echo.bitlomanka.top" method="post" class="form_of_communication margin">
+                                <div class="form_float_block float_mob_none clearfix">
+                                    <label for="user_field_id" class="label">Имя</label>
+                                    <div class="input_container">
+                                        <input id="user_field_id" type="text" name="username" placeholder="Как к Вам обращаться" value="" class="type_text">
+                                    </div>
+                                </div>
+                                <div class="form_float_block float_mob_none clearfix">
+                                    <label for="mail_id" class="label">Email</label>
+                                    <div class="input_container error_right">
+                                        <input id="mail_id" type="text" name="mail" placeholder="Куда мне писать" value="" class="type_text">
+                                    </div>
+                                </div>
+                                <label for="message" class="label">Сообщение</label>
+                                <div class="input_container">
+                                    <textarea name="message" id="message" class="message" placeholder="Кратко в чем суть"></textarea>
+                                </div>
+                                <label for="captcha" class="label">Введите код, указанный на картинке</label>
+                                <div class="form_float_block m_n">
+                                    <div class="captcha_block_img">
+                                        <img src="images/cpt.png" alt="" class="captcha_img">
+                                    </div> 
+                                    <input type="submit" value="Отправить" class="submit button_form">
+                                </div>
+                                <div class="form_float_block">
+                                   <div class="input_container error_right">
+                                        <input id="captcha" type="text" name="captcha" placeholder="Введите код" value="" class="captcha type_text">
+                                    </div>
+                                    <input type="reset" value="Очистить" class="clean button_form">
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    
+                </main>
+                <aside class="sidebar">
+                    <nav class="navigation">
+                        <ul class="list">
+                            <li class="menu_item">
+                                <a href="index.html" class="list_item menu_item_link">Обо мне</a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="project.html" class="list_item menu_item_link">Мои Работы</a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="form.html" class="list_item menu_item_link active_nav">Обратная связь</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h2 class="contact">Контакты</h2>
+                    <ul class="list">
+                        <li class="menu_item">
+                            <a href="mailto:victoria.kr.1990@gmail.com" class="mail list_item contact_item_link">
+                                <span class="contact_icon_1 contact_icons">
+                                    mail
+                                </span> <span class="cont_t">victoria.kr.1990@gmail.com</span>
+                            </a>
+                            </li>
+                        <li class="menu_item">
+                            <a href="tel:+380675199702" class="list_item contact_item_link">
+                               <span class="contact_icon_2 contact_icons">
+                                    phone
+                                </span>
+                                <span class="cont_t">+380675199702</span>
+                            </a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="skype:bitlomanka11" class="list_item contact_item_link">
+                                <span class="contact_icon_3 contact_icons">
+                                    skype
+                                </span> 
+                                <span class="cont_t">bitlomanka11</span>
+                            </a>
+                        </li>
+                     </ul>
+                </aside>
+                <div class="hide_list">
+                   <ul class="list mob_contact">
+                        <li class="menu_item">
+                            <a href="mailto:victoria.kr.1990@gmail.com" class="mail list_item contact_item_link">
+                                <span class="contact_icon_1 contact_icons">
+                                    mail
+                                </span> <span class="cont_t">victoria.kr.1990@gmail.com</span>
+                            </a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="tel:+380675199702" class="list_item contact_item_link">
+                               <span class="contact_icon_2 contact_icons">
+                                    phone
+                                </span>
+                                <span class="cont_t">+380675199702</span>
+                            </a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="skype:bitlomanka11" class="list_item contact_item_link">
+                                <span class="contact_icon_3 contact_icons">
+                                    skype
+                                </span> 
+                                <span class="cont_t">bitlomanka11</span>
+                            </a>
+                        </li>
+                     </ul>
+                    <ul class="social_mob">
+                        <li class="social_item">
+                            <a href="https://www.facebook.com/profile.php?id=100009317504364" target="_blank" class="social_item_link facebook">
+                                facebook
+                            </a>
+                        </li>
+                        <li class="social_item">
+                            <a href="https://vk.com/b1tlomanka" target="_blank" class="social_item_link vkontakte">
+                                vkontakte
+                            </a>
+                        </li>
+                        <li class="social_item">
+                            <a href="#" class="social_item_link twitter">
+                                twiter
+                            </a>
+                        </li>
+                         <li class="social_item">
+                            <a href="https://github.com/bitlomanka" target="_blank" class="social_item_link github">
+                                github
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container_footer">
+                <a href="#" class="entrance">
+                    вход
+                </a>
+                 <div class="copy">
+                    &copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- build:js js/main.js -->
+    <script src="bower/jquery/dist/jquery.min.js"></script> 
+    <script src="bower/jquery-placeholder/jquery.placeholder.js"></script> 
+    <script src="bower/bPopup/jquery.bpopup.js"></script>
+    <script src="bower/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

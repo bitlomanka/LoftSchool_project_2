@@ -1,0 +1,16 @@
+doctype html
+html
+  head(lang="ru")
+    title 
+        block title
+    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    //build:css css/bundle.min.css
+    link(rel="stylesheet", href="css/style.css")
+    link(href="bower/normalize-css/normalize.css" rel="stylesheet")
+    //endbuild
+  body
+    include _common/_header
+    .wrapper
+        include _common/_sidebar

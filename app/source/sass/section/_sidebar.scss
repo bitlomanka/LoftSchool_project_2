@@ -1,0 +1,39 @@
+
+.sidebar{
+    float: left;
+    width: 30.2%;
+    margin-right: 2.1%;
+}
+
+
+.active-category{
+    margin-bottom: 30px;
+}
+
+.sidebar-list__link{
+    display: block;
+    padding-left:8.4%;
+    padding-right: 8.4%;
+}
+
+.product-line{
+    @extend %border;
+    background: #fbfbfb;
+    margin-bottom:38px;
+}
+
+product-line__item{
+    border-top: 1px solid #dee1e4;
+}
+
+
+.product-line__link{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    color: #5d656c;
+    
+}
+
+.product-line__link_active{
+    background: #d9e5ea;
+}

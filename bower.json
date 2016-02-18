@@ -1,0 +1,10 @@
+{
+  "name": "project",
+  "dependencies": {
+    "jquery": "^1",
+    "normalize-css": "latest",
+    "jquery-placeholder": "latest",
+    "jquery-validation": "jquery-validate#latest",
+    "bPopup": "bpopup#latest"
+  }
+}

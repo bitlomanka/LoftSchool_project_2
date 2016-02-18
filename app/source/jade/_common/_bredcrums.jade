@@ -1,0 +1,9 @@
+
+mixin bredcrums(items)
+    .bredcrums
+        ul.bredcrums__list
+            each item, i in items
+                li.bredcrums__item
+                    a.bredcrums__link(href="#" class="#{i == items.length - 1 ? 'bredcrums__link_active' : ''}")= item
+
++bredcrums(['Главная', 'Каталог']) 

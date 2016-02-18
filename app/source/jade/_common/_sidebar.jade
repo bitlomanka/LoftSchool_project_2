@@ -1,0 +1,19 @@
+aside.sidebar
+    h2.active-category
+        | Мобильные телефоны
+    ul.sidebar-list.product-line
+        - var nav = ['Флагманы', 'В ближайшем ко мне магазине']
+            each item in nav
+                li.product-line__item.sidebar-list__item
+                    a.sidebar-list__link.product-line__link(href="#" class="#{i == nav.length - 1 ? 'product-line__link_active' : ''}")= item
+    ul.sidebar-list.shop-filter
+        - var items = ['Во всех магазинах', 'Во всех магазинах']
+            each item in items
+                li.sidebar-list__item.shop-filter__list
+                	
+
+                	
+                    
+                  
+                    
+                    
