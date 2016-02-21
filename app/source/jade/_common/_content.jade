@@ -1,0 +1,51 @@
+main.content
+    .sort-block
+        .block-sort-select
+            span.sort__select-text
+                | Сортировать по
+            select.sort__select
+                option
+                    | по цене
+                option
+                    | по популярности
+        .display-catalog
+            span.sort__select-text
+                | Сортировать по
+            - for(var i = 0; i < 3; i++)
+                .display-catalog__view
+    section.section
+        - for(var i = 0; i < 9; i++)
+            ul.product-list
+                li.product__item
+                    .slide-show
+                        .slideshow__display
+                            img(src="http://lorempixel.com/135/135" alt="")
+                        ul.slide-show__list
+                            li.slide-show__item
+                                a(href="#").slide-show__pic
+                                   img(src="/images/phone-mini-1.png" alt="").slide-show__img
+                            li.slide-show__item
+                                a(href="#").slide-show__pic
+                                   img(src="/images/phone-mini-2.png" alt="").slide-show__img
+                            li.slide-show__item
+                                a(href="#").slide-show__pic
+                                   img(src="/images/phone-mini-3.png" alt="").slide-show__img
+                    .product-info-list
+                        h3.tile__name-product
+                            | Samsung GT-I9301I GALAXY S 3
+                        .description__product
+                            | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+                        .rating__block
+                    .cost-of
+                        .cost-of__price
+                            | 11 290 P
+                        input(type="button", name="add-to-cart" value="В корзину").cost-of__add-to-cart
+                        .cost-of__product-availability
+                                | В наличии
+    ul.pages-list
+        - var items = ['', '1', '2', '3', '']
+            each item in items
+                li.pages__list
+                    a(href="#").pages__link= item
+                    
+

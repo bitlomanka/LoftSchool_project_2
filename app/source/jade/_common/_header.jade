@@ -1,37 +1,29 @@
 header.header
     .header-bg
-        .wrapper
-            .container-block
+        .container-block
+            .wrapper__iner
                 .container-social
-                    ul.social
-                        - var social = ['fb', 'vk', 'tw']
-                        each item, index in social
-                                li.social__item
-                                    a(href="#" class="sogial__link_#{item}").socials__link= item
+                    mixin social('header')
                 .contacts-header
                     .contacts-header__block
                         | ул. Маяковская 6, офис 17
+                    .contacts-header__block.contacts-header__block_phone-number
                         | +7 (921) 123-12-13
-    .wrapper
+    .wrapper__iner
         .container-block
             a(href="#").logo
                 img(src="images/logo.png", alt="logo").logo__img
-            form.search
-                input(type="search" name="search" placeholder="Что будем искать").search__field
-                input(type="submit" value="Найти").search__submit
+            .search-block
+                form.search__form
+                    input(type="search" name="search" placeholder="Что будем искать").search__field
+                    input(type="submit" value="Найти").search__submit
             ul.block-user
                 - var userLink = ['Карта проезда', 'История заказов', 'Корзина']
                     each item, idx in userLink
-                            li.block-user__item
-                                a(href="#").block-user__link= item
+                        li.block-user__item
+                            a(href="#").block-user__link= item
     .header-bg
-        .wrapper
-            nav
-                ul.navigation
-                    - var nav = ['Планшеты', 'Мобильные телефоны', 'Мр3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
-                        each item in nav
-                            li.navigation__item
-                                a(href="#").navigation__link= item
-    .wrapper
-        .container-block
-            include _bredcrums
+        .wrapper__iner
+            mixin nav('header', 'Мобильные телефоны')
+    .wrapper__iner
+        include _bredcrums

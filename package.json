@@ -13,7 +13,7 @@
     "gulp-concat": "latest",
     "gulp-concat-css": "latest",
     "gulp-if": "latest",
-    "gulp-jade": "latest",
+    "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "latest",
     "gulp-rename": "latest",

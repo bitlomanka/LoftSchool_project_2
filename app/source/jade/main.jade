@@ -7,10 +7,24 @@ html
     meta(name="description", content="")
     meta(name="keywords", content="")
     //build:css css/bundle.min.css
-    link(rel="stylesheet", href="css/style.css")
     link(href="bower/normalize-css/normalize.css" rel="stylesheet")
+    link(rel="stylesheet", href="fonts/stylesheet.css")
+    link(rel="stylesheet", href="css/style.css")
     //endbuild
   body
-    include _common/_header
     .wrapper
-        include _common/_sidebar
+        .cover
+            //- mixins
+            include _common/_social
+            include _common/_nav
+            //- mixins end
+            include _common/_header
+            .wrapper__iner
+                include _common/_sidebar
+                include _common/_content
+            include _common/_info
+    include _common/_footer
+    //build:js js/main.js
+    script(src="bower/jquery/dist/jquery.min.js")
+    script(src="js/main.js")
+    //endbuild

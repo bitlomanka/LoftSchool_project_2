@@ -2,18 +2,75 @@ aside.sidebar
     h2.active-category
         | Мобильные телефоны
     ul.sidebar-list.product-line
-        - var nav = ['Флагманы', 'В ближайшем ко мне магазине']
-            each item in nav
-                li.product-line__item.sidebar-list__item
-                    a.sidebar-list__link.product-line__link(href="#" class="#{i == nav.length - 1 ? 'product-line__link_active' : ''}")= item
-    ul.sidebar-list.shop-filter
-        - var items = ['Во всех магазинах', 'Во всех магазинах']
-            each item in items
-                li.sidebar-list__item.shop-filter__list
-                	
+        - var nav = ['Флагманы', 'Бюджетная линейка']
+            each item, i in nav
+                li.product-line__item
+                    a.product-line__link(href="#" class="#{i == nav.length - 1 ? 'product-line__link_active' : ''}")= item
+    form.form-sidebar
+        .title-filter
+            | Наличие в магазинах
+        ul.sidebar-list.shop-list
+            - var items = ['В ближайшем ко мне магазине', 'Во всех магазинах']
+                each item, i in items
+                    li.sidebar-list__item.shop-filter__item
+                        label
+                            - if (i == 0)
+                                input(type="radio" checked name="shop").shop-filter__check
+                            - else
+                                input(type="radio" name="shop").shop-filter__check
+                            span.radio
+                            = item
+        .accordion
+            .title-filter
+                | Бренды
+            ul.sidebar-list.shop-list
+                - var items = ['Lenovo','Apple', 'Samsung', 'Asus', 'Motorola']
+                    each item, i in items
+                        li.sidebar-list__item.shop-filter__item
+                            label
+                                - if (i == 0)
+                                    input(type="checkbox" checked name="shop-check").shop-filter__check
+                                - else
+                                    input(type="checkbox" name="shop-check").shop-filter__check
+                                span.check
+                                = item
+                    li.sidebar-list__item.shop-filter__item
+                        a(href="#").shop-filter__reset
+                            |Сбросить фильтр
+            .title-filter
+                | Цена
+            ul.sidebar-list.price-list
+                - var items = ['от', 'до']
+                -var p = ['price-min', 'price-max']
+                    each item, i in items
+                        li.sidebar-list__item.price_item
+                                label.price-lab(for="#{p[i]}")= item
+                                - if (i == 0)
+                                    input(type="text" checked name="price-min" value="100" id="price-min").price__field
+                                - else
+                                    input(type="text" name="price-min" value="13 000" id="price-max").price__field
+            .title-filter
+                | Цвет
+            ul.sidebar-list.color-list
+                -for(var i = 1; i <= 12; i++)
+                        li.sidebar-list__item(class="color__item color__item_#{i}")
+            .title-filter
+                | Операционные системы
+            ul.sidebar-list.shop-list
+                - var items = ['Android','iOS', 'Windows Mobile', 'Symbian', 'Custom']
+                    each item, i in items
+                        li.sidebar-list__item.shop-filter__item
+                            label
+                                - if (i == 0)
+                                    input(type="checkbox" checked name="shop-check").shop-filter__check
+                                - else
+                                    input(type="checkbox" name="shop-check").shop-filter__check
+                                span.check
+                            = item
+                    li.sidebar-list__item.shop-filter__item
+                        a(href="#").shop-filter__reset
+                            |Сбросить фильтр
+    .turn
 
-                	
-                    
-                  
-                    
-                    
+
+
