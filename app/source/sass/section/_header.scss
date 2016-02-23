@@ -174,11 +174,12 @@ $color-font: #333333;
 }
 
 .navigation__item{
-    display: table-cell;
+
 }
 
 .navigation__item_header{
-
+    display: table-cell;
+    text-align: center;
 }
 
 .navigation__link_header{

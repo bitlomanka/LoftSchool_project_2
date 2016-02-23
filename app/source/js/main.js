@@ -42,39 +42,31 @@ $(document).ready(function(){
     });
     
     $(function(){
-  $('#columnized').columnize({
-  	columns: 2,
-    lastNeverTallest: true
-  });
-});
+        $('#columnized').columnize({
+            columns: 2,
+            lastNeverTallest: true
+        });
+    });
 
     // переключалки
 
-     $('.display-catalog__view-0').on("click", function(e){
+    $('.display-catalog__view-0, .display-catalog__view-1, .display-catalog__view-2').on("click", function(e){
         e.stopPropagation();
-        $('.section').find('.product__item_list').addClass('product__item').removeClass('product__item_list');
-        $('.section').find('.product-list__picture-list').addClass('product__item').removeClass('product-list__picture-list');
-        $('.section').find('.product-list__2').addClass('product-list').removeClass('product-list__2');
-        $('.feature-list').css("display", "none");
-    });
 
-    $('.display-catalog__view-1').on("click", function(e){
-         e.stopPropagation();
-        $('.section').find('.product-list').addClass('product-list__2').removeClass('product-list');
-        $('.product-list__2').find('.product__item_list').addClass('product-list__picture-list').removeClass('product__item_list');
-        $('.product-info-list').find('.feature-list').css("display", "block");
+        var ulClass = '',
+            itemClass = '';
 
-        $('.product__item').addClass('product-list__picture-list').removeClass('product__item');
+        if($(this).hasClass('display-catalog__view-0')) {
+            itemClass = 'product__item';
+        } else if ($(this).hasClass('display-catalog__view-1')) {
+            ulClass = 'product-list__2';
+            itemClass = 'product-list__picture-list';
+        } else {
+            itemClass = 'product__item_list';
+        }
 
-
-    });
-
-    $('.display-catalog__view-2').on("click", function(e){
-        e.stopPropagation();
-        $('.section').find('.product__item').addClass('product__item_list').removeClass('product__item');
-        $('.section').find('.product-list__picture-list').addClass('product__item_list').removeClass('product-list__picture-list');
-        $('.section').find('.product-list__2').addClass('product-list').removeClass('product-list__2');
-        $('.feature-list').css("display", "none");
+        $('.product-list').removeClass('product-list__2').addClass(ulClass);
+        $('.product__item_list, .product__item, .product-list__picture-list').removeClass('product__item_list product__item product-list__picture-list').addClass(itemClass);
     });
 
 });
