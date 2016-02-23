@@ -12,33 +12,59 @@ main.content
             span.sort__select-text
                 | Сортировать по
             - for(var i = 0; i < 3; i++)
-                .display-catalog__view
+                div(class="display-catalog__view display-catalog__view-#{i}")
     section.section
-        - for(var i = 0; i < 9; i++)
-            ul.product-list
+        ul.product-list
+            - for(var i = 0; i < 9; i++)
                 li.product__item
                     .slide-show
                         .slideshow__display
-                            img(src="http://lorempixel.com/135/135" alt="")
+                            img(src="images/phone-1.png" alt="").slideshow__display__img
                         ul.slide-show__list
                             li.slide-show__item
                                 a(href="#").slide-show__pic
-                                   img(src="/images/phone-mini-1.png" alt="").slide-show__img
+                                   img(src="images/phone-1.png" alt="").slide-show__img
                             li.slide-show__item
                                 a(href="#").slide-show__pic
                                    img(src="/images/phone-mini-2.png" alt="").slide-show__img
                             li.slide-show__item
                                 a(href="#").slide-show__pic
                                    img(src="/images/phone-mini-3.png" alt="").slide-show__img
+                        .vendor__code
+                            | Артикул
+                            span.vendor__code__number
+                                | 387228
                     .product-info-list
                         h3.tile__name-product
                             | Samsung GT-I9301I GALAXY S 3
                         .description__product
                             | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+                        ul.feature-list
+                            li.feature__item
+                                span.feature__key Тип SIM-карты
+                                span.feature__val Micro-SIM
+                            li.feature__item
+                                span.feature__key Количество SIM-карт
+                                span.feature__val 1
+                            li.feature__item
+                                span.feature__key Цвет
+                                span.feature__val Белый
+                            li.feature__item
+                                span.feature__key ОC
+                                span.feature__val Android
+                            li.feature__item
+                                span.feature__key Связь 3G
+                                span.feature__val Есть
+                            li.feature__item
+                                span.feature__key 4G (LTE)
+                                span.feature__val Нет
+                            li.feature__item
+                                span.feature__key GPS-модуль
+                                span.feature__val Есть
                         .rating__block
                     .cost-of
                         .cost-of__price
-                            | 11 290 P
+                            | 11 290 &#8381;
                         input(type="button", name="add-to-cart" value="В корзину").cost-of__add-to-cart
                         .cost-of__product-availability
                                 | В наличии

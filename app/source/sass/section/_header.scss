@@ -51,6 +51,9 @@ $color-font: #333333;
     float: left;
 }
 
+//@import "compass";
+//@import "socials/*png";
+
 .social{
     @extend %letter-spacing;
 }
@@ -99,7 +102,7 @@ $color-font: #333333;
 
 .logo{
     @extend %inline-block;
-    width: 238px;
+    width: 21.8%;
     height: 36px;
 }
 
@@ -144,6 +147,7 @@ $color-font: #333333;
     @extend %inline-block;
     margin:8px 0 0 4.4%;
     width: 35.333%;
+    letter-spacing: -0.3em;
 }
 
 .block-user__item{
@@ -158,6 +162,7 @@ $color-font: #333333;
     text-decoration: underline;
     color: $color-font;
     font: 16px 'open_sanssemibold';
+    text-align: center;
     &:hover{
         color: #f60;
     }

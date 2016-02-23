@@ -1,5 +1,5 @@
 .footer{
-    height: 221px;
+    min-height: 221px;
     background: #353535;
     margin-top: -221px;
 }
@@ -31,8 +31,11 @@
     width: 43px;
 }
 
+
 .navigation__item_footer{
     margin-left: 3%;
+    display: block;
+    float: right;
 }
 
 .navigation__link_footer{

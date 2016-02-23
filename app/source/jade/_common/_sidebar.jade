@@ -23,7 +23,7 @@ aside.sidebar
         .accordion
             .title-filter
                 | Бренды
-            ul.sidebar-list.shop-list
+            ul.sidebar-list.shop-list.filter__item_brand-name
                 - var items = ['Lenovo','Apple', 'Samsung', 'Asus', 'Motorola']
                     each item, i in items
                         li.sidebar-list__item.shop-filter__item
@@ -56,7 +56,7 @@ aside.sidebar
                         li.sidebar-list__item(class="color__item color__item_#{i}")
             .title-filter
                 | Операционные системы
-            ul.sidebar-list.shop-list
+            ul.sidebar-list.shop-list.shop-list_os
                 - var items = ['Android','iOS', 'Windows Mobile', 'Symbian', 'Custom']
                     each item, i in items
                         li.sidebar-list__item.shop-filter__item
