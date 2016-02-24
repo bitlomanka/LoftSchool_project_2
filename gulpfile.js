@@ -29,7 +29,8 @@ gulp.task('compass', function() {
     .pipe(compass({
       config_file: './config.rb',
       css: 'app/source/css',
-      sass: 'app/source/sass'
+      sass: 'app/source/sass',
+      image: 'app/source/images'
     }))
 });
 

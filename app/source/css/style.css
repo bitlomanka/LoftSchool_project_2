@@ -109,18 +109,61 @@ img {
   width: 26px;
 }
 
+.socials-sprite, .social__link_fb, .social__link_vk, .social__link_tw {
+  background-image: url('../images/socials-s0a50d91bad.png');
+  background-repeat: no-repeat;
+}
+
+.social__link_fb {
+  background-position: 0 0;
+}
+
+.social__link_vk {
+  background-position: 0 -52px;
+}
+
+.social__link_tw {
+  background-position: 0 -26px;
+}
+
 .contacts-header {
   float: right;
   margin-left: -111px;
 }
 
+.head-sprite, .contacts-header__block:before, .contacts-header__block_phone-number:before {
+  background-image: url('../images/head-sae2f641214.png');
+  background-repeat: no-repeat;
+}
+
 .contacts-header__block {
   margin-left: 111px;
   font: 14px / 24px 'open_sansregular';
+  position: relative;
+}
+.contacts-header__block:before {
+  content: '';
+  width: 12px;
+  height: 16px;
+  background-position: 0 0;
+  position: absolute;
+  margin-top: -6px;
+  top: 50%;
+  left: -19px;
 }
 
 .contacts-header__block_phone-number {
   font: 18px / 24px 'open_sanssemibold';
+}
+.contacts-header__block_phone-number:before {
+  content: '';
+  width: 12px;
+  height: 16px;
+  background-position: 0 -16px;
+  position: absolute;
+  margin-top: -6px;
+  top: 50%;
+  left: -19px;
 }
 
 .logo {
@@ -299,6 +342,11 @@ img {
   border-bottom: 1px solid #dee1e4;
 }
 
+.sidebar-sprite, label .shop-filter__check + .radio, label .shop-filter__check:checked + .radio, label .shop-filter__check + .check, label .shop-filter__check:checked + .check, .turn {
+  background-image: url('../images/sidebar-sadefb8f160.png');
+  background-repeat: no-repeat;
+}
+
 .title-filter {
   padding-top: 11px;
   padding-bottom: 7px;
@@ -324,11 +372,14 @@ label .shop-filter__check + .radio {
   height: 19px;
   margin: -1px 4px 0 0;
   vertical-align: middle;
-  background: url(../images/radio.png) left top no-repeat;
+  background-position: 0 -76px;
   cursor: pointer;
 }
+label .shop-filter__check + .radio:active, label .shop-filter__check + .radio.radio-active {
+  background-position: 0 -57px;
+}
 label .shop-filter__check:checked + .radio {
-  background: url(../images/radio-active.png) center center no-repeat;
+  background-position: 0 -57px;
 }
 label .shop-filter__check + .check {
   display: inline-block;
@@ -336,11 +387,14 @@ label .shop-filter__check + .check {
   height: 19px;
   margin: -1px 4px 0 0;
   vertical-align: middle;
-  background: url(../images/check.png) left top no-repeat;
+  background-position: 0 -19px;
   cursor: pointer;
 }
+label .shop-filter__check + .check:active, label .shop-filter__check + .check.check-active {
+  background-position: 0 0;
+}
 label .shop-filter__check:checked + .check {
-  background: url(../images/check-active.png) center center no-repeat;
+  background-position: 0 0;
 }
 
 .accordion {
@@ -442,13 +496,23 @@ label .shop-filter__check:checked + .check {
 }
 
 .turn {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   position: absolute;
   right: 4%;
   top: 214px;
-  background: #000;
   cursor: pointer;
+  background-position: 0 -38px;
+  transform: rotate(180deg);
+}
+
+.ui-corner-all {
+  height: 3px;
+  background: #dee1e4;
+}
+
+.ui-slider .ui-slider-range {
+  background: #ff6600;
 }
 
 .content {
@@ -491,6 +555,23 @@ label .shop-filter__check:checked + .check {
   width: 51px;
   height: 51px;
   cursor: pointer;
+}
+
+.view-sprite, .display-catalog__view-0, .display-catalog__view-1, .display-catalog__view-2 {
+  background-image: url('../images/view-se9a4528b44.png');
+  background-repeat: no-repeat;
+}
+
+.display-catalog__view-0 {
+  background-position: 0 0;
+}
+
+.display-catalog__view-1 {
+  background-position: 0 -51px;
+}
+
+.display-catalog__view-2 {
+  background-position: 0 -102px;
 }
 
 .section {
@@ -651,6 +732,7 @@ label .shop-filter__check:checked + .check {
   padding: 5px 0;
   font-size: 16px;
   font: 16px / 20px 'open_sanssemibold';
+  min-height: 40px;
 }
 .product-list__picture-list .tile__name-product {
   text-align: center;
@@ -704,6 +786,18 @@ label .shop-filter__check:checked + .check {
 .feature__val {
   float: right;
   display: block;
+}
+
+.rating__block {
+  height: 16px;
+  background: url(../images/reg.png) no-repeat;
+}
+.product-list__picture-list .rating__block {
+  margin: 0 auto;
+  width: 137px;
+}
+.product__item_list .rating__block {
+  display: none;
 }
 
 .cost-of {

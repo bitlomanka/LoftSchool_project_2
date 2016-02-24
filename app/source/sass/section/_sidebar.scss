@@ -63,6 +63,8 @@
     border-bottom: 1px solid #dee1e4;
 }
 
+@import "sidebar/*.png";
+
 .title-filter{
     @extend %padding;
     padding-top: 11px;
@@ -90,11 +92,11 @@ label .shop-filter__check {
         height:19px;
         margin:-1px 4px 0 0;
         vertical-align:middle;
-        background:url(../images/radio.png) left top no-repeat;
+        @include sidebar-sprite(radio);
         cursor:pointer;
     }
     &:checked + .radio {
-        background:url(../images/radio-active.png) center center no-repeat;
+        @include sidebar-sprite(radio-active);
     }
     & + .check{
         display:inline-block;
@@ -102,11 +104,11 @@ label .shop-filter__check {
         height:19px;
         margin:-1px 4px 0 0;
         vertical-align:middle;
-        background:url(../images/check.png) left top no-repeat;
+        @include sidebar-sprite(check);
         cursor:pointer;
     }
     &:checked + .check {
-        background:url(../images/check-active.png) center center no-repeat;
+        @include sidebar-sprite(check-active);
     }
 }
 
@@ -181,12 +183,23 @@ $bg-item-list: (#ffffff, #cccccc, #000000, #0a3153, #ff1800, #fff343, #fb914a, #
 };
 
 .turn{
-    width: 18px;
-    height: 18px;
+    width: 19px;
+    height: 19px;
     position: absolute;
     right: 4%;
     top: 214px;
-    background: #000;
     cursor: pointer;
+    @include sidebar-sprite(open);
+    transform: rotate(180deg);
 }
+
+.ui-corner-all{
+    height: 3px;
+    background: #dee1e4;
+}
+
+.ui-slider .ui-slider-range {
+    background: #ff6600;
+}
+
 

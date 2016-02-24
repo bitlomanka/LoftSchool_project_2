@@ -14,60 +14,302 @@ main.content
             - for(var i = 0; i < 3; i++)
                 div(class="display-catalog__view display-catalog__view-#{i}")
     section.section
+
+        -
+            var product_list = [
+                {
+                    name: 'Samsung GT-I9301I GALAXY S 3',
+                    descr: 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... ',
+                    art: '189238',
+                    rating: 'images/reg.png',
+                    price: '11 290',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-1.png',
+                        'images/phone-mini-2.png',
+                        'images/phone-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '1',
+                        'Цвет': 'Белый',
+                        'ОC': 'Android',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'Есть'
+                    }
+                },
+                {
+                    name: 'Microsoft Lumia 640 RM-1077',
+                    descr: 'Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...',
+                    art: '189238',
+                    rating: '4',
+                    price: '10 990',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-2-1.png',
+                        'images/phone-2-mini-2.png',
+                        'images/phone-2-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Белый',
+                        'ОC': 'Windows Phone',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'A-GPS'
+                    }
+                },
+                {
+                    name: 'Archos 50 Oxygen Plus ',
+                    descr: 'Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...',
+                    art: '189238',
+                    rating: '4',
+                    price: '8 990',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-4-1.png',
+                        'images/phone-4-mini-2.png',
+                        'images/phone-4-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Серый',
+                        'ОC': ' Android',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'Есть'
+                    }
+                },
+                {
+                    name: 'Philips S398 Black ',
+                    descr: 'Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели...',
+                    art: '189238',
+                    rating: '4',
+                    price: '9 900',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-3-1.png',
+                        'images/phone-3-mini-2.png',
+                        'images/phone-3-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Белый',
+                        'ОC': 'Android',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'A-GPS'
+                    }
+                },
+                {
+                    name: 'Microsoft Lumia 430 RM-1099',
+                    descr: 'Смартфон Microsoft Lumia 430 RM-1099 black Куда бы вы ни направлялись, смартфон должен быть надежным спутником. Поэтому у Microsoft Lumia 430 Dual SIM (RM-1099) удобный компактный корпус ...',
+                    art: '387228',
+                    rating: '4',
+                    price: '5 390',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-5-1.png',
+                        'images/phone-5-mini-2.png',
+                        'images/phone-5-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Черный',
+                        'ОC': 'Windows Phone',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'A-GPS'
+                    }
+                },
+                {
+                    name: 'Senseit L301 black ',
+                    descr: 'Смартфон Senseit L301 black, черный. Micro-SIM, две поддерживаемых SIM-карты, Android, 3G, GPS-модуль...',
+                    art: '359110',
+                    rating: '4',
+                    price: '4 990',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-6-1.png',
+                        'images/phone-6-mini-2.png',
+                        'images/phone-6-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Черный',
+                        'ОC': 'Android',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'Есть'
+                    }
+                },
+                {
+                    name: 'HIGHSCREEN WinWin Black ',
+                    descr: 'Смартфон HIGHSCREEN WinWin Black оснащен 4" дисплеем и двумя слотами для SIM-карт.Windows Phone, 3G, Bluetooth, USB-подключение к ПК...',
+                    art: '189238',
+                    rating: '4',
+                    price: '3 990 ',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-7-1.png',
+                        'images/phone-7-mini-2.png',
+                        'images/phone-7-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Черный',
+                        'ОC': 'Windows Phone',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'Есть'
+                    }
+                },
+                {
+                    name: 'Alcatel OT4013D PIXI 3 (2 SIM)',
+                    descr: 'Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM).Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...',
+                    art: '112234',
+                    rating: '4',
+                    price: '3 290 ',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-8-1.png',
+                        'images/phone-8-mini-2.png',
+                        'images/phone-8-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Белый',
+                        'ОC': 'Android',
+                        'Связь 3G': 'Есть',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'A-GPS'
+                    }
+                },
+                {
+                    name: 'Fly IQ434 Era Nano 5',
+                    descr: 'Смартфон Fly IQ434 Era Nano 5 оснащен 3.5" дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi...',
+                    art: ' 387228',
+                    rating: '4',
+                    price: '1 790',
+                    avail: 'В наличии',
+                    pictures: [
+                        'images/phone-9-1.png',
+                        'images/phone-9-mini-2.png',
+                        'images/phone-9-mini-3.png'
+                    ],
+                    features: {
+                        'Тип SIM-карты': 'Micro-SIM',
+                        'Количество SIM-карт': '2',
+                        'Цвет': 'Черный',
+                        'ОC': 'Android',
+                        'Связь 3G': 'Нет',
+                        '4G (LTE)': 'Нет',
+                        'GPS-модуль':'Нет'
+                    }
+                }
+            ];
+
         ul.product-list
-            - for(var i = 0; i < 9; i++)
+            each item in product_list
                 li.product__item
                     .slide-show
                         .slideshow__display
-                            img(src="images/phone-1.png" alt="").slideshow__display__img
+                            img(src="#{item.pictures[0]}" alt="").slideshow__display__img
                         ul.slide-show__list
-                            li.slide-show__item
-                                a(href="#").slide-show__pic
-                                   img(src="images/phone-1.png" alt="").slide-show__img
-                            li.slide-show__item
-                                a(href="#").slide-show__pic
-                                   img(src="/images/phone-mini-2.png" alt="").slide-show__img
-                            li.slide-show__item
-                                a(href="#").slide-show__pic
-                                   img(src="/images/phone-mini-3.png" alt="").slide-show__img
+                            each picture in item.pictures
+                                li.slide-show__item
+                                    a(href="#").slide-show__pic
+                                       img(src="#{picture}" alt="").slide-show__img
                         .vendor__code
                             | Артикул
                             span.vendor__code__number
-                                | 387228
+                                =item.art
                     .product-info-list
                         h3.tile__name-product
-                            | Samsung GT-I9301I GALAXY S 3
+                            =item.name
                         .description__product
-                            | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+                            =item.descr
                         ul.feature-list
-                            li.feature__item
-                                span.feature__key Тип SIM-карты
-                                span.feature__val Micro-SIM
-                            li.feature__item
-                                span.feature__key Количество SIM-карт
-                                span.feature__val 1
-                            li.feature__item
-                                span.feature__key Цвет
-                                span.feature__val Белый
-                            li.feature__item
-                                span.feature__key ОC
-                                span.feature__val Android
-                            li.feature__item
-                                span.feature__key Связь 3G
-                                span.feature__val Есть
-                            li.feature__item
-                                span.feature__key 4G (LTE)
-                                span.feature__val Нет
-                            li.feature__item
-                                span.feature__key GPS-модуль
-                                span.feature__val Есть
-                        .rating__block
+                            each feature, feature_key in item.features
+                                li.feature__item
+                                    span.feature__key= feature_key
+                                    span.feature__val= feature
+                        div(class="rating__block rating__block_#{item.rating}")
                     .cost-of
                         .cost-of__price
-                            | 11 290 &#8381;
+                            =item.price
+                            | &#8381;
                         input(type="button", name="add-to-cart" value="В корзину").cost-of__add-to-cart
                         .cost-of__product-availability
-                                | В наличии
+                                =item.avail
+    ul.pages-list
+        - var items = ['', '1', '2', '3', '']
+            each item in items
+                li.pages__list
+                    a(href="#").pages__link= item
+
+//        ul.product-list
+//            - for(var i = 0; i < 9; i++)
+//                li.product__item
+//                    .slide-show
+//                        .slideshow__display
+//                            img(src="images/phone-1.png" alt="").slideshow__display__img
+//                        ul.slide-show__list
+//                            li.slide-show__item
+//                                a(href="#").slide-show__pic
+//                                   img(src="images/phone-1.png" alt="").slide-show__img
+//                            li.slide-show__item
+//                                a(href="#").slide-show__pic
+//                                   img(src="/images/phone-mini-2.png" alt="").slide-show__img
+//                            li.slide-show__item
+//                                a(href="#").slide-show__pic
+//                                   img(src="/images/phone-mini-3.png" alt="").slide-show__img
+//                        .vendor__code
+//                            | Артикул
+//                            span.vendor__code__number
+//                                | 387228
+//                    .product-info-list
+//                        h3.tile__name-product
+//                            | Samsung GT-I9301I GALAXY S 3
+//                        .description__product
+//                            | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+//                        ul.feature-list
+//                            li.feature__item
+//                                span.feature__key Тип SIM-карты
+//                                span.feature__val Micro-SIM
+//                            li.feature__item
+//                                span.feature__key Количество SIM-карт
+//                                span.feature__val 1
+//                            li.feature__item
+//                                span.feature__key Цвет
+//                                span.feature__val Белый
+//                            li.feature__item
+//                                span.feature__key ОC
+//                                span.feature__val Android
+//                            li.feature__item
+//                                span.feature__key Связь 3G
+//                                span.feature__val Есть
+//                            li.feature__item
+//                                span.feature__key 4G (LTE)
+//                                span.feature__val Нет
+//                            li.feature__item
+//                                span.feature__key GPS-модуль
+//                                span.feature__val Есть
+//                        .rating__block
+//                    .cost-of
+//                        .cost-of__price
+//                            | 11 290 &#8381;
+//                        input(type="button", name="add-to-cart" value="В корзину").cost-of__add-to-cart
+//                        .cost-of__product-availability
+//                                | В наличии
     ul.pages-list
         - var items = ['', '1', '2', '3', '']
             each item in items

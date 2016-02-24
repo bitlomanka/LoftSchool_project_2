@@ -6,8 +6,10 @@ $(document).ready(function(){
          e.stopPropagation();
         if($('.accordion').is(":hidden")){
             $(this).parent('.sidebar').find('.accordion').slideDown(700);
+            $(this).css("transform", "rotate(0deg)");
         }else{
             $(this).parent('.sidebar').find('.accordion').slideUp(500);
+            $(this).css("transform", "rotate(180deg)");
         }
     });
 
@@ -41,12 +43,34 @@ $(document).ready(function(){
         $(this).css("border", "2px solid #ff6600");
     });
     
-    $(function(){
-        $('#columnized').columnize({
-            columns: 2,
-            lastNeverTallest: true
-        });
+    //колонки
+
+    $('#columnized').columnize({
+        columns: 2,
+        lastNeverTallest: true
     });
+
+
+    // селект2
+
+    $('.sort__select').select2({
+        minimumResultsForSearch: -1
+    });
+
+
+    // слайдер цен
+
+    $("#price-range").slider({
+        range: true,
+        min: $('#price-min').data('min'),
+        max: $('#price-max').data('max'),
+        values: [$('#price-min').val(), $('#price-max').val()],
+        slide: function( event, ui ) {
+            $('#price-min').val(ui.values[0])
+            $('#price-max').val(ui.values[1])
+        }
+    });
+
 
     // переключалки
 

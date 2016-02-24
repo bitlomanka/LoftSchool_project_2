@@ -6,8 +6,11 @@ html
     meta(http-equiv="content-type", content="text/html; charset=UTF-8")
     meta(name="description", content="")
     meta(name="keywords", content="")
+    link(rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon")
     //build:css css/bundle.min.css
     link(href="bower/normalize-css/normalize.css" rel="stylesheet")
+    link(rel="stylesheet", href="bower/select2/dist/css/select2.min.css")
+    link(rel="stylesheet", href="css/lib/jquery-ui.min.css")
     link(rel="stylesheet", href="fonts/stylesheet.css")
     link(rel="stylesheet", href="css/style.css")
     //endbuild
@@ -27,5 +30,7 @@ html
     //build:js js/main.js
     script(src="bower/jquery/dist/jquery.min.js")
     script(src="js/libs/jquery.columnizer.js")
+    script(src="bower/select2/dist/js/select2.min.js")
+    script(src="js/libs/jquery-ui.min.js")
     script(src="js/main.js")
     //endbuild

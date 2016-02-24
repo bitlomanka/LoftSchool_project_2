@@ -45,6 +45,20 @@
     cursor: pointer;
 }
 
+@import "view/*.png";
+
+.display-catalog__view-0{
+    @include view-sprite(view-1);
+}
+
+.display-catalog__view-1{
+    @include view-sprite(view-2);
+}
+
+.display-catalog__view-2{
+    @include view-sprite(view-3);
+}
+
 .section{
     margin-bottom: 66px;
 }
@@ -215,6 +229,7 @@
     padding: 5px 0;
     font-size: 16px;
     font: 16px / 20px 'open_sanssemibold';
+    min-height: 40px;
     .product-list__picture-list & {
         text-align: center;
         font: 14px / 20px 'open_sanssemibold';
@@ -274,6 +289,15 @@
 
 
 .rating__block{
+    height: 16px;
+    background: url(../images/reg.png) no-repeat;
+    .product-list__picture-list & {
+        margin: 0 auto;
+        width: 137px;
+    }
+    .product__item_list & {
+        display: none;
+    }
 }
 
 .cost-of{

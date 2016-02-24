@@ -41,14 +41,17 @@ aside.sidebar
                 | Цена
             ul.sidebar-list.price-list
                 - var items = ['от', 'до']
-                -var p = ['price-min', 'price-max']
+                - var p = ['price-min', 'price-max']
                     each item, i in items
                         li.sidebar-list__item.price_item
-                                label.price-lab(for="#{p[i]}")= item
-                                - if (i == 0)
-                                    input(type="text" checked name="price-min" value="100" id="price-min").price__field
-                                - else
-                                    input(type="text" name="price-min" value="13 000" id="price-max").price__field
+                            label.price-lab(for="#{p[i]}")= item
+                            - if (i == 0)
+                                input(type="text" checked name="price-min" data-min="50" value="100" id="price-min").price__field
+                            - else
+                                input(type="text" name="price-min" data-max="30000" value="13000" id="price-max").price__field
+                    li.sidebar-list__item
+                        #price-range
+
             .title-filter
                 | Цвет
             ul.sidebar-list.color-list

@@ -5,8 +5,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 		<!--build:css css/bundle.min.css-->
 		<link href="bower/normalize-css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" href="bower/select2/dist/css/select2.min.css">
+		<link rel="stylesheet" href="css/lib/jquery-ui.min.css">
 		<link rel="stylesheet" href="fonts/stylesheet.css">
 		<link rel="stylesheet" href="css/style.css">
 		<!--endbuild-->
@@ -124,11 +127,14 @@
 								<ul class="sidebar-list price-list">
 									<li class="sidebar-list__item price_item">
 										<label for="price-min" class="price-lab">от</label>
-										<input type="text" checked name="price-min" value="100" id="price-min" class="price__field">
+										<input type="text" checked name="price-min" data-min="50" value="100" id="price-min" class="price__field">
 									</li>
 									<li class="sidebar-list__item price_item">
 										<label for="price-max" class="price-lab">до</label>
-										<input type="text" name="price-min" value="13 000" id="price-max" class="price__field">
+										<input type="text" name="price-min" data-max="30000" value="13000" id="price-max" class="price__field">
+									</li>
+									<li class="sidebar-list__item">
+										<div id="price-range"></div>
 									</li>
 								</ul>
 								<div class="title-filter">Цвет</div>
@@ -200,14 +206,16 @@
 										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
 											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">189238</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3
+										</h3>
+										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц... 
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
 											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
@@ -217,252 +225,286 @@
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
 											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_images/reg.png"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">11 290&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-2-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-2-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-2-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-2-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">189238</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Microsoft Lumia 640 RM-1077
+										</h3>
+										<div class="description__product">Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
 											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
-											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
+											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Windows Phone</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
-											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
+											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">A-GPS</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">10 990&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-4-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-4-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-4-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-4-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">189238</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Archos 50 Oxygen Plus 
+										</h3>
+										<div class="description__product">Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
-											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
-											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
+											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Серый</span></li>
+											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val"> Android</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
 											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">8 990&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-3-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-3-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-3-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-3-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">189238</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Philips S398 Black 
+										</h3>
+										<div class="description__product">Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
 											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
 											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
-											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
+											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">A-GPS</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">9 900&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-5-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-5-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-5-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-5-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
 										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Microsoft Lumia 430 RM-1099
+										</h3>
+										<div class="description__product">Смартфон Microsoft Lumia 430 RM-1099 black Куда бы вы ни направлялись, смартфон должен быть надежным спутником. Поэтому у Microsoft Lumia 430 Dual SIM (RM-1099) удобный компактный корпус ...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
-											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
-											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
+											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Черный</span></li>
+											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Windows Phone</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
-											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
+											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">A-GPS</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">5 390&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-6-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-6-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-6-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-6-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">359110</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Senseit L301 black 
+										</h3>
+										<div class="description__product">Смартфон Senseit L301 black, черный. Micro-SIM, две поддерживаемых SIM-карты, Android, 3G, GPS-модуль...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
-											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
+											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Черный</span></li>
 											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
 											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">4 990&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-7-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-7-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-7-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-7-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">189238</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">HIGHSCREEN WinWin Black 
+										</h3>
+										<div class="description__product">Смартфон HIGHSCREEN WinWin Black оснащен 4&quot; дисплеем и двумя слотами для SIM-карт.Windows Phone, 3G, Bluetooth, USB-подключение к ПК...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
-											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
-											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
+											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Черный</span></li>
+											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Windows Phone</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
 											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">3 990 &#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-8-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-8-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-8-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-8-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number">112234</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Alcatel OT4013D PIXI 3 (2 SIM)
+										</h3>
+										<div class="description__product">Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM).Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
 											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
 											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
 											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
-											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
+											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">A-GPS</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">3 290 &#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 								<li class="product__item">
 									<div class="slide-show">
-										<div class="slideshow__display"><img src="images/phone-1.png" alt="" class="slideshow__display__img"></div>
+										<div class="slideshow__display"><img src="images/phone-9-1.png" alt="" class="slideshow__display__img"></div>
 										<ul class="slide-show__list">
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-1.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-2.png" alt="" class="slide-show__img"></a></li>
-											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="/images/phone-mini-3.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-9-1.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-9-mini-2.png" alt="" class="slide-show__img"></a></li>
+											<li class="slide-show__item"><a href="#" class="slide-show__pic"><img src="images/phone-9-mini-3.png" alt="" class="slide-show__img"></a></li>
 										</ul>
-										<div class="vendor__code">Артикул<span class="vendor__code__number">387228</span></div>
+										<div class="vendor__code">Артикул<span class="vendor__code__number"> 387228</span></div>
 									</div>
 									<div class="product-info-list">
-										<h3 class="tile__name-product">Samsung GT-I9301I GALAXY S 3</h3>
-										<div class="description__product">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</div>
+										<h3 class="tile__name-product">Fly IQ434 Era Nano 5
+										</h3>
+										<div class="description__product">Смартфон Fly IQ434 Era Nano 5 оснащен 3.5&quot; дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi...
+										</div>
 										<ul class="feature-list">
 											<li class="feature__item"><span class="feature__key">Тип SIM-карты</span><span class="feature__val">Micro-SIM</span></li>
-											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">1</span></li>
-											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Белый</span></li>
+											<li class="feature__item"><span class="feature__key">Количество SIM-карт</span><span class="feature__val">2</span></li>
+											<li class="feature__item"><span class="feature__key">Цвет</span><span class="feature__val">Черный</span></li>
 											<li class="feature__item"><span class="feature__key">ОC</span><span class="feature__val">Android</span></li>
-											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Есть</span></li>
+											<li class="feature__item"><span class="feature__key">Связь 3G</span><span class="feature__val">Нет</span></li>
 											<li class="feature__item"><span class="feature__key">4G (LTE)</span><span class="feature__val">Нет</span></li>
-											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Есть</span></li>
+											<li class="feature__item"><span class="feature__key">GPS-модуль</span><span class="feature__val">Нет</span></li>
 										</ul>
-										<div class="rating__block"></div>
+										<div class="rating__block rating__block_4"></div>
 									</div>
 									<div class="cost-of">
-										<div class="cost-of__price">11 290 &#8381;</div>
+										<div class="cost-of__price">1 790&#8381;
+										</div>
 										<input type="button" name="add-to-cart" value="В корзину" class="cost-of__add-to-cart">
-										<div class="cost-of__product-availability">В наличии</div>
+										<div class="cost-of__product-availability">В наличии
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -475,6 +517,67 @@
 							<li class="pages__list"><a href="#" class="pages__link"></a></li>
 						</ul>
 					</main>
+					<!--        ul.product-list-->
+					<!--            - for(var i = 0; i < 9; i++)-->
+					<!--                li.product__item-->
+					<!--                    .slide-show-->
+					<!--                        .slideshow__display-->
+					<!--                            img(src="images/phone-1.png" alt="").slideshow__display__img-->
+					<!--                        ul.slide-show__list-->
+					<!--                            li.slide-show__item-->
+					<!--                                a(href="#").slide-show__pic-->
+					<!--                                   img(src="images/phone-1.png" alt="").slide-show__img-->
+					<!--                            li.slide-show__item-->
+					<!--                                a(href="#").slide-show__pic-->
+					<!--                                   img(src="/images/phone-mini-2.png" alt="").slide-show__img-->
+					<!--                            li.slide-show__item-->
+					<!--                                a(href="#").slide-show__pic-->
+					<!--                                   img(src="/images/phone-mini-3.png" alt="").slide-show__img-->
+					<!--                        .vendor__code-->
+					<!--                            | Артикул-->
+					<!--                            span.vendor__code__number-->
+					<!--                                | 387228-->
+					<!--                    .product-info-list-->
+					<!--                        h3.tile__name-product-->
+					<!--                            | Samsung GT-I9301I GALAXY S 3-->
+					<!--                        .description__product-->
+					<!--                            | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...-->
+					<!--                        ul.feature-list-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key Тип SIM-карты-->
+					<!--                                span.feature__val Micro-SIM-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key Количество SIM-карт-->
+					<!--                                span.feature__val 1-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key Цвет-->
+					<!--                                span.feature__val Белый-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key ОC-->
+					<!--                                span.feature__val Android-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key Связь 3G-->
+					<!--                                span.feature__val Есть-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key 4G (LTE)-->
+					<!--                                span.feature__val Нет-->
+					<!--                            li.feature__item-->
+					<!--                                span.feature__key GPS-модуль-->
+					<!--                                span.feature__val Есть-->
+					<!--                        .rating__block-->
+					<!--                    .cost-of-->
+					<!--                        .cost-of__price-->
+					<!--                            | 11 290 &#8381;-->
+					<!--                        input(type="button", name="add-to-cart" value="В корзину").cost-of__add-to-cart-->
+					<!--                        .cost-of__product-availability-->
+					<!--                                | В наличии
+					ul.pages-list
+					    - var items = ['', '1', '2', '3', '']
+					        each item in items
+					            li.pages__list
+					                a(href="#").pages__link= item
+					                
+					-->
 				</div>
 				<div class="wrapper__iner">
 					<div class="title__info">Важная информация</div>
@@ -515,6 +618,8 @@
 		<!--build:js js/main.js-->
 		<script src="bower/jquery/dist/jquery.min.js"></script>
 		<script src="js/libs/jquery.columnizer.js"></script>
+		<script src="bower/select2/dist/js/select2.min.js"></script>
+		<script src="js/libs/jquery-ui.min.js"></script>
 		<script src="js/main.js"></script>
 		<!--endbuild-->
 	</body>
