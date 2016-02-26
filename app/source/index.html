@@ -16,21 +16,18 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="cover"></div>
 			<header class="header">
 				<div class="header-bg">
 					<div class="container-block">
 						<div class="wrapper__iner">
-							<div class="container-social">
-											<ul class="social social_header">
-												<li class="social__item social__item_header"><a href="#" class="socials__link social__link_fb social__link_header">fb</a></li>
-												<li class="social__item social__item_header"><a href="#" class="socials__link social__link_vk social__link_header">vk</a></li>
-												<li class="social__item social__item_header"><a href="#" class="socials__link social__link_tw social__link_header">tw</a></li>
-											</ul>
-							</div>
+										<ul class="social social_header">
+											<li class="social__item social__item_header"><a href="#" target="_blank" class="socials__link social__link_fb social__link_header">fb</a></li>
+											<li class="social__item social__item_header"><a href="#" target="_blank" class="socials__link social__link_vk social__link_header">vk</a></li>
+											<li class="social__item social__item_header"><a href="#" target="_blank" class="socials__link social__link_tw social__link_header">tw</a></li>
+										</ul>
 							<div class="contacts-header">
 								<div class="contacts-header__block">ул. Маяковская 6, офис 17</div>
-								<div class="contacts-header__block contacts-header__block_phone-number">+7 (921) 123-12-13</div>
+								<div class="contacts-header__block"><a href="tel:+7921123-12-13" class="contacts-header__block_phone-number">+7 (921) 123-12-13</a></div>
 							</div>
 						</div>
 					</div>
@@ -63,38 +60,43 @@
 									</ul>
 					</div>
 				</div>
-				<div class="wrapper__iner">
-										<div class="bredcrums">
-											<ul class="bredcrums__list">
-												<li class="bredcrums__item"><a href="#" class="bredcrums__link">Главная</a></li>
-												<li class="bredcrums__item"><a href="#" class="bredcrums__link bredcrums__link_active">Каталог</a></li>
-											</ul>
-										</div>
-				</div>
 			</header>
+			<!--    .wrapper__iner-->
 			<div class="wrapper__iner">
+								<div class="bredcrums">
+									<ul class="bredcrums__list">
+										<li class="bredcrums__item"><a href="#" class="bredcrums__link">Главная</a></li>
+										<li class="bredcrums__item"><a href="#" class="bredcrums__link bredcrums__link_active">Каталог</a></li>
+									</ul>
+								</div>
+				<h2 class="active-category">Мобильные телефоны</h2>
 				<aside class="sidebar">
-					<h2 class="active-category">Мобильные телефоны</h2>
 					<ul class="sidebar-list product-line">
 						<li class="product-line__item"><a href="#" class="product-line__link">Флагманы</a></li>
 						<li class="product-line__item"><a href="#" class="product-line__link product-line__link_active">Бюджетная линейка</a></li>
 					</ul>
 					<form class="form-sidebar">
-						<div class="title-filter">Наличие в магазинах</div>
-						<ul class="sidebar-list shop-list">
-							<li class="sidebar-list__item shop-filter__item">
-								<label>
-									<input type="radio" checked name="shop" class="shop-filter__check"><span class="radio"></span>В ближайшем ко мне магазине
-								</label>
-							</li>
-							<li class="sidebar-list__item shop-filter__item">
-								<label>
-									<input type="radio" name="shop" class="shop-filter__check"><span class="radio"></span>Во всех магазинах
-								</label>
-							</li>
-						</ul>
+						<div class="title-filter">Наличие в магазинах
+							<div class="turn"></div>
+						</div>
 						<div class="accordion">
-							<div class="title-filter">Бренды</div>
+							<ul class="sidebar-list shop-list">
+								<li class="sidebar-list__item shop-filter__item">
+									<label>
+										<input type="radio" checked name="shop" class="shop-filter__check"><span class="radio"></span>В ближайшем ко мне магазине
+									</label>
+								</li>
+								<li class="sidebar-list__item shop-filter__item">
+									<label>
+										<input type="radio" name="shop" class="shop-filter__check"><span class="radio"></span>Во всех магазинах
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="title-filter">Бренды
+							<div class="turn"></div>
+						</div>
+						<div class="accordion">
 							<ul class="sidebar-list shop-list filter__item_brand-name">
 								<li class="sidebar-list__item shop-filter__item">
 									<label>
@@ -123,7 +125,11 @@
 								</li>
 								<li class="sidebar-list__item shop-filter__item"><a href="#" class="shop-filter__reset">Сбросить фильтр</a></li>
 							</ul>
-							<div class="title-filter">Цена</div>
+						</div>
+						<div class="title-filter">Цена
+							<div class="turn"></div>
+						</div>
+						<div class="accordion">
 							<ul class="sidebar-list price-list">
 								<li class="sidebar-list__item price_item">
 									<label for="price-min" class="price-lab">от</label>
@@ -137,7 +143,11 @@
 									<div id="price-range"></div>
 								</li>
 							</ul>
-							<div class="title-filter">Цвет</div>
+						</div>
+						<div class="title-filter">Цвет
+							<div class="turn"></div>
+						</div>
+						<div class="accordion">
 							<ul class="sidebar-list color-list">
 								<li class="sidebar-list__item color__item color__item_1"></li>
 								<li class="sidebar-list__item color__item color__item_2"></li>
@@ -152,7 +162,11 @@
 								<li class="sidebar-list__item color__item color__item_11"></li>
 								<li class="sidebar-list__item color__item color__item_12"></li>
 							</ul>
-							<div class="title-filter">Операционные системы</div>
+						</div>
+						<div class="title-filter">Операционные системы
+							<div class="turn"></div>
+						</div>
+						<div class="accordion">
 							<ul class="sidebar-list shop-list shop-list_os">
 								<li class="sidebar-list__item shop-filter__item">
 									<label>
@@ -183,7 +197,6 @@
 							</ul>
 						</div>
 					</form>
-					<div class="turn"></div>
 				</aside>
 				<main class="content">
 					<div class="sort-block">
@@ -617,9 +630,9 @@
 			<div class="wrapper__iner"><a href="#" class="footer__logo"><img src="images/footer_logo.png" alt=""></a>
 				<div class="footer-right-block">
 								<ul class="social social_footer">
-									<li class="social__item social__item_footer"><a href="#" class="socials__link social__link_fb social__link_footer">fb</a></li>
-									<li class="social__item social__item_footer"><a href="#" class="socials__link social__link_vk social__link_footer">vk</a></li>
-									<li class="social__item social__item_footer"><a href="#" class="socials__link social__link_tw social__link_footer">tw</a></li>
+									<li class="social__item social__item_footer"><a href="#" target="_blank" class="socials__link social__link_fb social__link_footer">fb</a></li>
+									<li class="social__item social__item_footer"><a href="#" target="_blank" class="socials__link social__link_vk social__link_footer">vk</a></li>
+									<li class="social__item social__item_footer"><a href="#" target="_blank" class="socials__link social__link_tw social__link_footer">tw</a></li>
 								</ul>
 								<ul class="navigation">
 									<li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Планшеты</a></li>

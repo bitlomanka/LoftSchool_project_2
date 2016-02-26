@@ -2,13 +2,13 @@ header.header
     .header-bg
         .container-block
             .wrapper__iner
-                .container-social
-                    mixin social('header')
+                mixin social('header')
                 .contacts-header
                     .contacts-header__block
                         | ул. Маяковская 6, офис 17
-                    .contacts-header__block.contacts-header__block_phone-number
-                        | +7 (921) 123-12-13
+                    .contacts-header__block
+                        a(href="tel:+7921123-12-13").contacts-header__block_phone-number
+                            | +7 (921) 123-12-13
     .wrapper__iner
         .container-block
             a(href="#").logo
@@ -25,5 +25,5 @@ header.header
     .header-bg
         .wrapper__iner
             mixin nav('header', 'Мобильные телефоны')
-    .wrapper__iner
-        include _bredcrums
+//    .wrapper__iner
+

@@ -63,6 +63,10 @@
     border-bottom: 1px solid #dee1e4;
 }
 
+//.accordion{
+//    border-bottom: 1px solid #dee1e4;
+//}
+
 @import "sidebar/*.png";
 
 .title-filter{
@@ -70,6 +74,23 @@
     padding-top: 11px;
     padding-bottom: 7px;
     font: 16px 'open_sanssemibold';
+    position: relative;
+    border-bottom: 1px solid #dee1e4;
+}
+
+.turn{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 3%;
+    top: 15px;
+    cursor: pointer;
+    @include sidebar-sprite(open);
+    transform: rotate(180deg);
+}
+
+.rotate{
+    transform: rotate(0deg);
 }
 
 .shop-list{
@@ -109,6 +130,11 @@ label .shop-filter__check {
     }
     &:checked + .check {
         @include sidebar-sprite(check-active);
+    }
+}
+.shop-filter__check{
+    &:hover{
+        @include sidebar-sprite(check-hover);
     }
 }
 
@@ -186,17 +212,6 @@ $bg-item-list: (#ffffff, #cccccc, #000000, #0a3153, #ff1800, #fff343, #fb914a, #
         background: $bg;
     }
 };
-
-.turn{
-    width: 19px;
-    height: 19px;
-    position: absolute;
-    right: 4%;
-    top: 214px;
-    cursor: pointer;
-    @include sidebar-sprite(open);
-    transform: rotate(180deg);
-}
 
 .widget{
 

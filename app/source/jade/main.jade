@@ -16,13 +16,15 @@ html
     //endbuild
   body
     .wrapper
-        .cover
         //- mixins
         include _common/_social
         include _common/_nav
         //- mixins end
         include _common/_header
         .wrapper__iner
+            include _common/_bredcrums
+            h2.active-category
+                | Мобильные телефоны
             include _common/_sidebar
             include _common/_content
         include _common/_info

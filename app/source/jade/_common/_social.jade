@@ -4,4 +4,4 @@ mixin social(class_suffix)
         - var social = ['fb', 'vk', 'tw']
             each item in social
                 li(class="social__item" + (class_suffix ? ' social__item_#{class_suffix}' : ''))
-                    a(href="#" class="socials__link social__link_#{item}" + (class_suffix ? ' social__link_#{class_suffix}' : ''))= item
+                    a(href="#" target="_blank" class="socials__link social__link_#{item}" + (class_suffix ? ' social__link_#{class_suffix}' : ''))= item

@@ -47,9 +47,6 @@ $color-font: #333333;
     padding: 28px 0 30px;
 }
 
-.container-social{
-    float: left;
-}
 
 .social{
     @extend %letter-spacing;
@@ -57,6 +54,7 @@ $color-font: #333333;
 
 .social_header{
     margin-left: -16px;
+    float: left;
 }
 
 .social__item{
@@ -127,10 +125,17 @@ $color-font: #333333;
         top: 50%;
         left: -19px;
     }
+    &:last-child{
+        &:before{
+            display: none;
+        }
+    }
 }
 
 .contacts-header__block_phone-number{
     font: 18px / 24px 'open_sanssemibold';
+    display: block;
+    color: #333;
     &:before{
         content: '';
         width: 12px;
@@ -174,6 +179,9 @@ $color-font: #333333;
     width: 70.3%;
     font: 14px 'open_sanslight';
     display: table-cell;
+    &:focus{
+        border: 1px solid #ff6600;
+    }
 }
 
 .search__submit{
@@ -184,6 +192,9 @@ $color-font: #333333;
     color: #ffffff;
     margin-left: -0.5%;
     display: table-cell;
+    &:hover{
+        color: #333;
+    }
 }
 
 .block-user{
@@ -231,6 +242,7 @@ $color-font: #333333;
     color:$color-font;
     text-decoration: none;
     font: 16px 'open_sansregular';
+    word-wrap: break-word;
     &:hover{
         background: #e4e2e2;
     }
@@ -266,6 +278,9 @@ $color-font: #333333;
         top: 0;
         right: -21%;
         
+    }
+    &:hover{
+        color: #f60;
     }
 }
 

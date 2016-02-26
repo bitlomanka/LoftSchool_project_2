@@ -1,6 +1,4 @@
 aside.sidebar
-    h2.active-category
-        | Мобильные телефоны
     ul.sidebar-list.product-line
         - var nav = ['Флагманы', 'Бюджетная линейка']
             each item, i in nav
@@ -9,20 +7,23 @@ aside.sidebar
     form.form-sidebar
         .title-filter
             | Наличие в магазинах
-        ul.sidebar-list.shop-list
-            - var items = ['В ближайшем ко мне магазине', 'Во всех магазинах']
-                each item, i in items
-                    li.sidebar-list__item.shop-filter__item
-                        label
-                            - if (i == 0)
-                                input(type="radio" checked name="shop").shop-filter__check
-                            - else
-                                input(type="radio" name="shop").shop-filter__check
-                            span.radio
-                            = item
+            .turn
         .accordion
-            .title-filter
-                | Бренды
+            ul.sidebar-list.shop-list
+                - var items = ['В ближайшем ко мне магазине', 'Во всех магазинах']
+                    each item, i in items
+                        li.sidebar-list__item.shop-filter__item
+                            label
+                                - if (i == 0)
+                                    input(type="radio" checked name="shop").shop-filter__check
+                                - else
+                                    input(type="radio" name="shop").shop-filter__check
+                                span.radio
+                                = item
+        .title-filter
+            | Бренды
+            .turn
+        .accordion
             ul.sidebar-list.shop-list.filter__item_brand-name
                 - var items = ['Lenovo','Apple', 'Samsung', 'Asus', 'Motorola']
                     each item, i in items
@@ -37,8 +38,10 @@ aside.sidebar
                     li.sidebar-list__item.shop-filter__item
                         a(href="#").shop-filter__reset
                             |Сбросить фильтр
-            .title-filter
-                | Цена
+        .title-filter
+            | Цена
+            .turn
+        .accordion
             ul.sidebar-list.price-list
                 - var items = ['от', 'до']
                 - var p = ['price-min', 'price-max']
@@ -52,13 +55,17 @@ aside.sidebar
                     li.sidebar-list__item.widget
                         #price-range
 
-            .title-filter
-                | Цвет
+        .title-filter
+            | Цвет
+            .turn
+        .accordion
             ul.sidebar-list.color-list
                 -for(var i = 1; i <= 12; i++)
                         li.sidebar-list__item(class="color__item color__item_#{i}")
-            .title-filter
-                | Операционные системы
+        .title-filter
+            | Операционные системы
+            .turn
+        .accordion
             ul.sidebar-list.shop-list.shop-list_os
                 - var items = ['Android','iOS', 'Windows Mobile', 'Symbian', 'Custom']
                     each item, i in items
@@ -73,7 +80,6 @@ aside.sidebar
                     li.sidebar-list__item.shop-filter__item
                         a(href="#").shop-filter__reset
                             |Сбросить фильтр
-    .turn
 
 
 
