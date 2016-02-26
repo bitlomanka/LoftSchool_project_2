@@ -23,7 +23,7 @@ $(document).ready(function(){
             duration = 300;
 
         if(!item.hasClass('acive-slide')){
-            item.addClass('acive-slide').siblings().removeClass('acive-slide');
+            item.addClass('acive-slide active-bord').siblings().removeClass('acive-slide active-bord');
 
             display.find('img').fadeOut(duration, function(){
                 $(this).attr('src', path).fadeIn(duration);
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     $('.color__item').on("click", function(e){
          e.stopPropagation();
-        $(this).css("border", "2px solid #ff6600");
+        $(this).toggleClass('active-bord');
     });
     
     //колонки

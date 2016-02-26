@@ -31,6 +31,31 @@
     width: 43px;
 }
 
+@import "social-footer/*.png";
+@import "social-footer-hover/*.png";
+
+
+.social__link_footer.social__link_fb {
+    @include social-footer-sprite(fb);
+    &:hover{
+        @include social-footer-hover-sprite(fb);
+    }
+}
+
+.social__link_footer.social__link_vk {
+    @include social-footer-sprite(vk);
+    &:hover{
+        @include social-footer-hover-sprite(vk);
+    }
+}
+
+.social__link_footer.social__link_tw {
+    @include social-footer-sprite(tw);
+    &:hover{
+        @include social-footer-hover-sprite(tw);
+    }
+}
+
 
 .navigation__item_footer{
     margin-left: 3%;

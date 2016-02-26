@@ -80,17 +80,27 @@ $color-font: #333333;
 }
 
 @import "socials/*.png";
+@import "socials-hover/*.png";
 
 .social__link_fb {
     @include socials-sprite(fb);
+    &:hover{
+        @include socials-hover-sprite(fb);
+    }
 }
 
 .social__link_vk {
     @include socials-sprite(vk);
+    &:hover{
+        @include socials-hover-sprite(vk);
+    }
 }
 
 .social__link_tw {
     @include socials-sprite(tw);
+    &:hover{
+        @include socials-hover-sprite(tw);
+    }
 }
 
 .contacts-header{

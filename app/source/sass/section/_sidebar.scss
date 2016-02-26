@@ -137,7 +137,7 @@ label .shop-filter__check {
 
 .price-list{
     @extend %padding;
-    padding-bottom: 46px;
+    padding-bottom: 30px;
 }
 
 .price_item{
@@ -146,6 +146,7 @@ label .shop-filter__check {
     margin-left: 14.4%;
     width: 41.5%;
     padding: 8px 0;
+    margin-bottom: 11px;
     &:first-child{
        margin-left: 0;
     }
@@ -163,6 +164,10 @@ label .shop-filter__check {
     @extend %letter-spacing;
     margin-left: -11px;
     margin-top: -4px;
+}
+
+.active-bord{
+    box-shadow: 0 0 0 2px #ff6600;
 }
 
 .color__item{
@@ -193,6 +198,10 @@ $bg-item-list: (#ffffff, #cccccc, #000000, #0a3153, #ff1800, #fff343, #fb914a, #
     transform: rotate(180deg);
 }
 
+.widget{
+
+}
+
 .ui-corner-all{
     height: 3px;
     background: #dee1e4;
@@ -200,6 +209,13 @@ $bg-item-list: (#ffffff, #cccccc, #000000, #0a3153, #ff1800, #fff343, #fb914a, #
 
 .ui-slider .ui-slider-range {
     background: #ff6600;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: url(../images/slider.png) no-repeat center;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 
